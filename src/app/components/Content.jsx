@@ -1,3 +1,4 @@
+import Projects from './Projects';
 import Skills from './Skills';
 import Tools from './Tools';
 
@@ -11,26 +12,26 @@ export default function Content() {
     {
       heading: "Tools I use with ease",
       subheading: "Explore a showcase of my diverse projects and creations",
-      component: <Tools/>,
+      component: <Tools />,
     },
     {
       heading: "My creative portfolio",
       subheading: "Explore a showcase of my diverse projects and creations",
-    //   component: <Tools cards={["Portfolio 1", "Portfolio 2", "Portfolio 3"]} />,
+      component: <Projects />,
     },
   ];
 
   return (
-    <div className="flex flex-col items-center gap-16 mt-16 px-4 sm:px-8 md:px-16 lg:px-24">
+    <div className="flex flex-col items-center gap-20 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mt-12 sm:mt-16">
       {sections.map((section, index) => (
-        <div key={index} className="text-center">
-          <h2 className="text-[#7E57C2] font-poppins font-[500] text-[40px] sm:text-[50px] md:text-[60px] leading-[50px] sm:leading-[60px] md:leading-[70px] tracking-[-0.03em] mx-auto mt-[50px] sm:mt-[75px] md:mt-[100px]">
+        <div key={index} className="w-full text-center">
+          <h2 className="text-[#7E57C2] font-poppins font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-tight tracking-[-0.03em] mx-auto mt-[40px] sm:mt-[60px] md:mt-[80px]">
             {section.heading}
           </h2>
-          <p className="text-[#7E57C2] font-poppins font-[400] text-[16px] sm:text-[18px] leading-[140%] sm:leading-[150%] w-full max-w-[751px] mx-auto mt-4">
+          <p className="text-[#7E57C2] font-poppins font-normal text-[15px] sm:text-[17px] md:text-[18px] leading-relaxed max-w-[750px] mx-auto mt-4 px-2">
             {section.subheading}
           </p>
-          <div className="mt-8">{section.component}</div>
+          <div className="mt-10">{section.component}</div>
         </div>
       ))}
     </div>

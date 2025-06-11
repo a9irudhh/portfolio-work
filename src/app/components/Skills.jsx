@@ -52,7 +52,7 @@ export default function Skills() {
             >
               <div className="absolute top-[10px] left-[8px] w-[90%] sm:w-[280px] md:w-[331px] h-[150px] sm:h-[180px] md:h-[198px] border border-[#D1C4E9] rounded-[20px] bg-[#FFFFFF] z-[-1]"></div>
               <div className="relative top-[-22px]">
-                <div className="mt-[150px] sm:mt-[177px] md:mt-[227px]">
+                <div className="mt-[10px] sm:mt-[177px] md:mt-[227px]">
                   <h3 className="text-[#7E57C2] font-poppins font-[600] text-[16px] sm:text-[18px] md:text-[20px]">
                     {card.heading}
                   </h3>
