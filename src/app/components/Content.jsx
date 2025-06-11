@@ -11,7 +11,7 @@ export default function Content() {
     {
       heading: "Tools I use with ease",
       subheading: "Explore a showcase of my diverse projects and creations",
-    //   component: <Tools cards={["Tool 1", "Tool 2", "Tool 3", "Tool 4", "Tool 5", "Tool 6"]} />,
+      component: <Tools/>,
     },
     {
       heading: "My creative portfolio",
