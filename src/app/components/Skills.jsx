@@ -39,7 +39,7 @@ export default function Skills() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-8 sm:gap-12 px-4 sm:px-8 md:px-16">
+    <div className="flex flex-col items-center gap-8 sm:gap-12">
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
@@ -48,7 +48,7 @@ export default function Skills() {
           {row.map((card, index) => (
             <div
               key={index}
-              className="relative w-full sm:w-[300px] md:w-[350px] border border-[#D1C4E9] rounded-[20px] bg-[#EDE7F6] px-6 py-6 overflow-visible"
+              className="relative w-[405px] h-[380px] border border-[#D1C4E9] rounded-[20px] bg-[#EDE7F6] px-6 py-6 overflow-visible"
             >
               {/* White box inside purple card */}
               <div className="absolute top-4 left-4 right-4 h-[180px] sm:h-[180px] md:h-[198px] bg-white border border-[#D1C4E9] rounded-[20px] z-10"></div>
