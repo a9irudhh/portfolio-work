@@ -22,7 +22,7 @@ const cardData = [
 		title: 'Redesign',
 		tags: ['2024', 'Personal Care'],
 		centerText: '',
-		mainImages: ['/m3.png'],
+		mainImages: ['/m2.png'],
 		thumbnails: ['/t31.png', '/t32.png', '/t33.png', '/t34.png'],
 	},
 ];

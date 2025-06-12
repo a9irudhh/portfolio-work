@@ -3,7 +3,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function Statistics() {
   return (
-    <div className="w-full px-4 sm:px-6 md:px-8 max-w-[1280px] mx-auto">
+    <div className="w-full px-4 sm:px-6 md:px-8 max-w-[1240px] mx-auto">
       {/* Scrollable Tag Bar */}
       <div className="mt-[30px] w-full h-auto bg-[#EDE7F6] rounded-[70px] flex items-center justify-start overflow-x-auto gap-2 py-4 px-4">
         {[
@@ -17,7 +17,7 @@ export default function Statistics() {
         ].map((item, index) => (
           <div
             key={index}
-            className="min-w-[129px] h-[60px] bg-[#EDE7F6] rounded-[20px] border border-[#7E57C2] flex items-center justify-center px-4 flex-shrink-0"
+            className="min-w-[140px] h-[60px] bg-[#EDE7F6] rounded-[20px] border border-[#7E57C2] flex items-center justify-center px-4 flex-shrink-0"
           >
             <span className="font-[400] text-[16px] sm:text-[18px] text-[#000000] text-center whitespace-nowrap">
               {item}

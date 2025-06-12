@@ -29,6 +29,7 @@ export default function HeroSection() {
                 width={40}
                 height={40}
                 className="rounded-full"
+                unoptimized
               />
             </div>
             <p className="ml-[4px] font-poppins font-[400] text-[14px] sm:text-[16px] md:text-[18px] leading-[100%] text-black text-center">

@@ -53,11 +53,11 @@ export default function Navbar() {
 
       {/* Mobile Fullscreen Menu - Only visible on small screens */}
       {isMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-[#EDE7F6] flex flex-col items-center justify-center z-40 transition-transform duration-500 scale-100 opacity-100">
+        <div className="md:hidden fixed inset-0 w-[105vw] h-[105vh] bg-[#7E57C2] flex flex-col items-center justify-center z-[999] transition-transform duration-500 scale-100 opacity-100 m-0 p-0">
           {"Home About Work Contact".split(" ").map((item) => (
             <div
               key={item}
-              className="text-[20px] sm:text-[24px] font-normal text-[#757575] mb-4 cursor-pointer"
+              className="text-[20px] sm:text-[24px] font-normal text-[#FFFFFF] mb-4 cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
               {item}

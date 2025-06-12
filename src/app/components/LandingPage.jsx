@@ -16,7 +16,7 @@ export default function PortfolioLanding() {
         <Navbar />
 
       {/* Main content below navbar */}
-      <main className="pt-[80px] sm:pt-[100px] md:pt-[120px] px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <main className="sm:pt-[100px] md:pt-[120px] px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <section className="mb-12 sm:mb-16 md:mb-20">
           <HeroSection />
         </section>

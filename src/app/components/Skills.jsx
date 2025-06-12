@@ -48,18 +48,21 @@ export default function Skills() {
           {row.map((card, index) => (
             <div
               key={index}
-              className="w-full sm:w-[300px] md:w-[350px] h-auto border border-[#D1C4E9] rounded-[20px] flex flex-col items-start text-left relative bg-[#EDE7F6] px-6 py-4 overflow-hidden z-0"
+              className="relative w-full sm:w-[300px] md:w-[350px] border border-[#D1C4E9] rounded-[20px] bg-[#EDE7F6] px-6 py-6 overflow-visible"
             >
-              <div className="absolute top-[10px] left-[8px] w-[90%] sm:w-[280px] md:w-[331px] h-[150px] sm:h-[180px] md:h-[198px] border border-[#D1C4E9] rounded-[20px] bg-[#FFFFFF] z-[-1]"></div>
-              <div className="relative top-[-22px]">
-                <div className="mt-[10px] sm:mt-[177px] md:mt-[227px]">
-                  <h3 className="text-[#7E57C2] font-poppins font-[600] text-[16px] sm:text-[18px] md:text-[20px]">
-                    {card.heading}
-                  </h3>
-                  <p className="mt-5 text-[#7E57C2] font-poppins font-[400] text-[14px] sm:text-[16px]">
-                    {card.subheading}
-                  </p>
-                </div>
+              {/* White box inside purple card */}
+              <div className="absolute top-4 left-4 right-4 h-[180px] sm:h-[180px] md:h-[198px] bg-white border border-[#D1C4E9] rounded-[20px] z-10"></div>
+
+              {/* Heading */}
+              <div className="relative mt-[200px] z-20">
+                <h3 className="text-[#7E57C2] font-poppins font-semibold text-[18px] md:text-[20px] text-left">
+                  {card.heading}
+                </h3>
+
+                {/* Subheading */}
+                <p className="mt-4 text-[#7E57C2] font-poppins font-normal text-[14px] md:text-[16px] text-left">
+                  {card.subheading}
+                </p>
               </div>
             </div>
           ))}
