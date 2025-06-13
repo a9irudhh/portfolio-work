@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <div className={`relative ${poppins.className} px-6 sm:px-8 md:px-16 lg:px-24`}>
       <div className=" md:pt-8 flex justify-top items-center">
-        <div className="relative flex flex-col items-center w-full">
+        <div className="pt-10 relative flex flex-col items-center w-full">
           {/* Profile Image */}
           <div className="relative mb-4">
             <div className="absolute w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] md:w-[143px] md:h-[143px] bg-[#EBEBEB] rounded-full opacity-50 border-[1px] border-[#EBEBEB]"></div>
