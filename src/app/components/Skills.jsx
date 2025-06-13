@@ -31,8 +31,6 @@ export default function Skills() {
         "Understanding of user behaviour and psychology to design seamless and enjoyable user experiences",
     },
   ];
-
-  // Break into rows of 3
   const rows = [];
   for (let i = 0; i < cardDetails.length; i += 3) {
     rows.push(cardDetails.slice(i, i + 3));
@@ -43,23 +41,19 @@ export default function Skills() {
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12"
+          className="flex flex-wrap justify-center gap-4"
         >
           {row.map((card, index) => (
             <div
               key={index}
-              className="relative w-[405px] h-[380px] border border-[#D1C4E9] rounded-[20px] bg-[#EDE7F6] px-6 py-6 overflow-visible"
+              className="relative w-[400px] h-[380px] border border-[#D1C4E9] rounded-[20px] bg-[#EDE7F6] px-6 py-6 overflow-visible"
             >
-              {/* White box inside purple card */}
-              <div className="absolute top-4 left-4 right-4 h-[180px] sm:h-[180px] md:h-[198px] bg-white border border-[#D1C4E9] rounded-[20px] z-10"></div>
+              <div className="absolute top-4 left-4 right-4 h-[180px] bg-white border border-[#D1C4E9] rounded-[20px] z-10"></div>
 
-              {/* Heading */}
               <div className="relative mt-[200px] z-20">
                 <h3 className="text-[#7E57C2] font-poppins font-semibold text-[18px] md:text-[20px] text-left">
                   {card.heading}
                 </h3>
-
-                {/* Subheading */}
                 <p className="mt-4 text-[#7E57C2] font-poppins font-normal text-[14px] md:text-[16px] text-left">
                   {card.subheading}
                 </p>

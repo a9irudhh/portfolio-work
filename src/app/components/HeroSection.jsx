@@ -5,18 +5,18 @@ const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function HeroSection() {
   return (
-    <div className={`relative ${poppins.className} px-4 sm:px-8 md:px-16 lg:px-24`}>
-      <div className="pt-16 md:pt-8 flex justify-top items-center">
+    <div className={`relative ${poppins.className} px-6 sm:px-8 md:px-16 lg:px-24`}>
+      <div className=" md:pt-8 flex justify-top items-center">
         <div className="relative flex flex-col items-center w-full">
           {/* Profile Image */}
           <div className="relative mb-4">
-            <div className="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[143px] md:h-[143px] bg-[#EBEBEB] rounded-full opacity-50 border-[1px] border-[#EBEBEB]"></div>
+            <div className="absolute w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] md:w-[143px] md:h-[143px] bg-[#EBEBEB] rounded-full opacity-50 border-[1px] border-[#EBEBEB]"></div>
             <Image
               src="/user.jpg"
               alt="User Image"
               width={143}
               height={143}
-              className="relative z-10 rounded-full border-[4px] border-[#EBEBEB] object-cover w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[143px] md:h-[143px]"
+              className="relative z-10 rounded-full border-[4px] border-[#EBEBEB] object-cover w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] md:w-[143px] md:h-[143px]"
             />
           </div>
 
