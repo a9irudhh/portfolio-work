@@ -1,7 +1,4 @@
-import Image from "next/image";
 import { Poppins } from "next/font/google";
-import { User, Palette, Globe, Layers, Smartphone, Layout, ImportIcon } from "lucide-react";
-
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import Statistics from "./Statistics";
