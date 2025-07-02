@@ -1,6 +1,7 @@
 "use client";
 import { Poppins } from "next/font/google";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [showMenuContent, setShowMenuContent] = useState(false);
   const [circlePos, setCirclePos] = useState({ top: 0, left: 0 });
   const hamburgerRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,17 +50,25 @@ export default function Navbar() {
     return () => clearTimeout(timeout);
   }, [isMenuOpen]);
 
+  // Helper for navigation
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Work", path: "/work" },
+    { label: "Contact", path: "/contact" },
+  ];
 
   return (
     <div className="relative z-[1000]">
       {/* Desktop Navbar */}
       <div className="hidden md:flex w-full max-w-[90%] lg:max-w-[530px] h-[60px] sm:h-[72px] bg-[#EDE7F6] rounded-[20px] border border-[#D1C4E9] justify-around items-center top-[20px] sm:top-[30px] left-1/2 transform -translate-x-1/2 absolute">
-        {"Home About Work Contact".split(" ").map((item) => (
+        {navItems.map((item) => (
           <div
-            key={item}
+            key={item.label}
             className="w-[70px] h-[35px] sm:w-[80px] sm:h-[40px] md:w-[116px] md:h-[50px] flex justify-center items-center rounded-[10px] font-normal text-[14px] sm:text-[16px] md:text-[18px] leading-[100%] cursor-pointer transition-all duration-500 transform hover:scale-105 hover:bg-[#7E57C2] text-[#757575] hover:text-[#FFFFFF]"
+            onClick={() => router.push(item.path)}
           >
-            {item}
+            {item.label}
           </div>
         ))}
       </div>
@@ -96,13 +106,16 @@ export default function Navbar() {
       {/* Fullscreen Menu Content */}
       {showMenuContent && (
         <div className="md:hidden fixed inset-0 z-[999] flex flex-col items-center justify-center transition-opacity duration-500">
-          {"Home About Work Contact".split(" ").map((item) => (
+          {navItems.map((item) => (
             <div
-              key={item}
+              key={item.label}
               className="text-[20px] sm:text-[24px] font-normal text-[#FFFFFF] mb-4 cursor-pointer z-[1002]"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push(item.path);
+              }}
             >
-              {item}
+              {item.label}
             </div>
           ))}
         </div>
